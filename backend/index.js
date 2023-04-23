@@ -1,5 +1,5 @@
 const express=require('express')            //[x] express ins.
-const path=require('path')              
+const path=require('path') 
 require('dotenv').config({path:"./backend/config/config.env"})    //[x] dotenv
 const app= express()    
 const connection = require('./database/database')       //[x]  DB Connection
@@ -13,10 +13,10 @@ app.use(cors({origin:'*'}))
 app.use('/',HomeRoute)
 app.use('/',messageRoute)
 
-app.use(express.static(path.resolve("./frontend/build")))
+app.use(express.static(path.resolve("backend/build")))
 
 app.get("*",(req,res)=>{
-    res.sendFile(path.resolve("./frontend/build/index.html"))
+    res.sendFile(path.resolve("backend/build/index.html"))
 })
 
 app.listen(PORT,()=>{
