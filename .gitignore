@@ -9,15 +9,10 @@
 
 # testing
 /frontend/coverage
-/frontend/public
-/frontend/src
-/frontend/.gitingnore
-/frontend/package.json
-/frontend/package-lock.json
-/frontend/README.md
+
 
 # production
-
+/frontend/build
 
 # misc
 /frontend/.DS_Store
